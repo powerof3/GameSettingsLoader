@@ -1,0 +1,15 @@
+{
+  "name": "game-setting-loader",
+  "version-string": "1.0.0",
+  "description": "",
+  "homepage": "",
+  "license": "GPL-3.0-only",
+  "dependencies": [
+    "clib-util",
+    "rsm-mmio",
+    "rsm-binary-io",
+    "spdlog",
+    "xbyak"
+  ],
+  "builtin-baseline": "760bfd0c8d7c89ec640aec4df89418b7c2745605"
+}
