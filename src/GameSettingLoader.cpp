@@ -55,7 +55,7 @@ void GameSettingLoader::ApplyGameSettings()
 {
 	auto gmstCollection = RE::GameSettingCollection::GetSingleton();
 
-	if (!gmstCollection) {
+	if (!gmstCollection || gmstMap.empty()) {
 		return;
 	}
 
