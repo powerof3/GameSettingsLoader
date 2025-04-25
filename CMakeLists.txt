@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-set(NAME "po3_GameSettingLoader" CACHE STRING "")
+set(NAME "po3_GameSettingsLoader" CACHE STRING "")
 set(VERSION 1.0.0 CACHE STRING "")
 
 # ---- Options ----
