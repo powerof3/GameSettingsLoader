@@ -12,7 +12,7 @@ struct Hook_DataLoaded
 		});
 	}
 
-	static inline REL::Hook MainLoopFuncHook{ REL::Offset(0x65FC51B), MainLoopFunc };
+	static inline REL::Hook MainLoopFuncHook{ REL::Offset(0x65FB250), 0x12CB, MainLoopFunc };
 };
 
 void MessageHandler(OBSE::MessagingInterface::Message* a_msg)

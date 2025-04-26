@@ -3,13 +3,22 @@
 void GameSettingLoader::ReadConfigs()
 {
 	REX::INFO("{:*^30}", "CONFIGS");
-	
-	const std::filesystem::directory_entry folder{ "OBSE\\Plugins\\GameSettings" };
+
+	const std::filesystem::directory_entry rootFolder{ "OblivionRemastered\\Binaries\\Win64\\OBSE\\Plugins\\GameSettings" };
+	const std::filesystem::directory_entry exeFolder{ "OBSE\\Plugins\\GameSettings" };
+
+	std::filesystem::directory_entry folder{};
 
 	std::error_code ec;
-	if (!folder.exists(ec)) {
-		REX::WARN("GameSettings folder not found");
-		return;
+	if (!exeFolder.exists(ec)) {
+		if (!rootFolder.exists(ec)) {
+			REX::WARN("GameSettings folder not found ({})", ec.message());
+			return;
+		} else {
+			folder = rootFolder;
+		}
+	} else {
+		folder = exeFolder;
 	}
 
 	std::vector<std::string> configs{};
