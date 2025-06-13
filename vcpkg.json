@@ -1,6 +1,6 @@
 {
   "name": "game-settings-loader",
-  "version-string": "1.0.1",
+  "version-string": "1.1.0",
   "description": "",
   "homepage": "",
   "license": "GPL-3.0-only",
@@ -8,8 +8,11 @@
     "clib-util",
     "rsm-mmio",
     "rsm-binary-io",
-    "spdlog",
+    {
+      "name": "spdlog",
+      "features": [ "wchar" ]
+    },
     "xbyak"
   ],
-  "builtin-baseline": "760bfd0c8d7c89ec640aec4df89418b7c2745605"
+  "builtin-baseline": "4f2b3ff99c2d7f95a85d2725b381bbe78b2cc74b"
 }
